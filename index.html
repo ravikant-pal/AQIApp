@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Air Quality Index</title>
+    <link rel="stylesheet" href="AQIStyle.css">
+    <script src="AQIScript.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>Get Air Quality Index By Your City Name</header>
+        <p id="exception-handling" class="center"></p>
+        <!-- <input type="text"  value="xyz" disabled> -->
+        <input type="text" id="city-name" placeholder="Enter city name" onclick="hideError()">
+        <br>
+        <button onclick="getCoordDataAjax()">Get AQI </button>
+        <table id="output-table" class="table-design" align="center">
+            <tr id ='table-heading'><td>City Name</td><td>Air Quality Index</td><td>Status</td></tr>
+            <tr id="1"><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+</body>
+</html>
