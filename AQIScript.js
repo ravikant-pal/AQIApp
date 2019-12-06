@@ -42,6 +42,8 @@ function getCoordDataAjax() {
         else {
             document.getElementById('exception-handling').innerHTML = 'Invalid city name !';
             document.getElementById('exception-handling').style.display = 'block';
+            document.getElementById('exception-handling').style.width = '40%';
+            document.getElementById('exception-handling').style.marginLeft = '30%';
             document.getElementById('1').childNodes[0].innerHTML = '';
             document.getElementById('1').childNodes[1].innerHTML = '';
             document.getElementById('1').childNodes[2].innerHTML = '';
@@ -104,6 +106,8 @@ function getAQIDataAjax(cityLat, cityLon, city) {
             document.getElementById('1').childNodes[1].innerHTML = '';
             document.getElementById('1').childNodes[2].innerHTML = '';
             document.getElementById('1').style.backgroundColor = "#ffffff";
+            document.getElementById('exception-handling').style.width = '80%';
+            document.getElementById('exception-handling').style.marginLeft = '10%';
             document.getElementById('exception-handling').innerHTML = 'This city is not found in current record !';
             document.getElementById('exception-handling').style.display = 'block';
         }
