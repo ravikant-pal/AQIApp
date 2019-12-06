@@ -4,7 +4,7 @@ var cityLat = 0, cityLon = 0;
 function getCoordDataAjax() {
 
     city = document.getElementById('city-name').value;
-    coord_url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=6ad1c3c821b2af338bf7c817d26454e5';
+    coord_url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=6ad1c3c821b2af338bf7c817d26454e5';
 
     fetch(coord_url)
         .then(response => response.json())
@@ -13,7 +13,7 @@ function getCoordDataAjax() {
 
                 cityLat = data.coord.lat;
                 cityLon = data.coord.lon;
-                console.log(data);
+                //console.log(data);
                 getAQIDataAjax(cityLat, cityLon, city);
             } catch {
                 //alert("invalid city name !")
